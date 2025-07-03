@@ -22,4 +22,12 @@ public class ScoreManager : MonoBehaviour
         if (scoreText != null)
             scoreText.text = "Score: " + score.ToString();
     }
+
+    public void MinusPoint(int amount)
+    {
+        score -= amount;
+        Debug.Log("🎉 Điểm: " + score);
+        if (scoreText != null)
+            scoreText.text = "Score: " + score.ToString();
+    }
 }
