@@ -5,7 +5,11 @@ public class RewardManager : MonoBehaviour
 {
     public static RewardManager instance;
 
-    public List<string> unlockedRewards = new List<string>();
+    [Header("Danh sách phần thưởng")]
+    public List<RewardData> rewardList = new List<RewardData>();
+
+    public PlayerShooter playerShooter;
+    // Có thể thêm các thành phần khác như HealManager, ShieldManager...
 
     void Awake()
     {
@@ -17,15 +21,41 @@ public class RewardManager : MonoBehaviour
 
     public void UnlockReward(string rewardName)
     {
-        if (!unlockedRewards.Contains(rewardName))
+        RewardType foundReward = RewardType.None;
+
+        // Tìm trong danh sách reward
+        foreach (var rewardData in rewardList)
         {
-            unlockedRewards.Add(rewardName);
-            Debug.Log("✅ Đã mở khoá phần thưởng: " + rewardName);
-            // TODO: Hiển thị UI hoặc lưu vào PlayerPrefs...
+            if (rewardData.rewardName == rewardName)
+            {
+                foundReward = rewardData.rewardType;
+                break;
+            }
         }
-        else
+
+        if (foundReward == RewardType.None)
         {
-            Debug.Log("🔁 Phần thưởng đã có trước đó: " + rewardName);
+            Debug.LogWarning("⚠ Không tìm thấy phần thưởng tương ứng với: " + rewardName);
+            return;
+        }
+
+        Debug.Log("✅ Nhận được reward: " + foundReward);
+
+        // Thực hiện phần thưởng theo loại
+        switch (foundReward)
+        {
+            case RewardType.BonusShoot:
+                Debug.Log ("bannnn");
+                playerShooter?.ActivateShooting(2f);
+                break;
+
+            case RewardType.Heal:
+                Debug.Log("🩹 Heal player (chưa triển khai).");
+                break;
+
+            case RewardType.Shield:
+                Debug.Log("🛡️ Shield player (chưa triển khai).");
+                break;
         }
     }
 }

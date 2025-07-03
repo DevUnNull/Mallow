@@ -918,7 +918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8015a1588bbcc0c4eaf41739db9e3a8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 8963334006555708427, guid: 6de26a9a5a957694a9ab73ba0af20946, type: 3}
   shootPoint: {fileID: 1411110507}
   shootingInterval: 0.2
 --- !u!1 &1327569125
@@ -950,7 +950,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38210f998774ae447bc9a7e2ae4af6e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unlockedRewards: []
+  rewardList:
+  - rewardName: Gift_4
+    rewardType: 1
+  - rewardName: Gift_2
+    rewardType: 2
+  - rewardName: Gift_3
+    rewardType: 3
+  playerShooter: {fileID: 1196387910}
 --- !u!4 &1327569127
 Transform:
   m_ObjectHideFlags: 0
@@ -1268,11 +1275,15 @@ MonoBehaviour:
   - {fileID: 3159710083111542276, guid: fae73089e9180fe43815201d04ead4b3, type: 3}
   - {fileID: 635171948458450524, guid: 2245b0b07f841214190e70fb40b91595, type: 3}
   - {fileID: 6846438665335069090, guid: 12d0d52b529f5d34d82d7efac1a34251, type: 3}
+  - {fileID: 55165302855235829, guid: 17eb2e5d29e3907438fb30ff10ed4a28, type: 3}
+  - {fileID: 4748619129940120625, guid: 6f3909bb476642846baed36195bf6f1a, type: 3}
   spawnWeights:
-  - 2
-  - 2
   - 1
-  - 2
+  - 1
+  - 3
+  - 5
+  - 3
+  - 3
   - 3
   spawnInterval: 2
 --- !u!4 &2063373043

@@ -32,18 +32,8 @@ public class ObstacleSpawner : MonoBehaviour
     {
         int index = GetWeightedRandomIndex();
         Vector3 spawnPos = new Vector3(10f, Random.Range(-4.2f, 4.2f), 0f);
-
         // Spawn prefab
         GameObject spawned = Instantiate(obstaclePrefabs[index], spawnPos, Quaternion.identity);
-
-        // Nếu prefab có GiftPoint, truyền rewardName là "Element {index}"
-        GiftPoint gift = spawned.GetComponent<GiftPoint>();
-        if (gift != null)
-        {
-            string rewardName = "Phần thưởng từ element " + index;
-            gift.SetReward(rewardName);
-            Debug.Log("🎁 Đã spawn Gift ở element " + index);
-        }
     }
 
 

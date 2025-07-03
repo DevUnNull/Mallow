@@ -8,6 +8,7 @@ TagManager:
   - Obstacle
   - Undefined
   - Gift
+  - Shooter
   layers:
   - Default
   - TransparentFX

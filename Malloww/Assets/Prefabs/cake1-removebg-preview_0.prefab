@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 4775245375860265524}
   - component: {fileID: 3494422184876120723}
   - component: {fileID: 7693284168700665262}
+  - component: {fileID: 352786087445184561}
   m_Layer: 0
   m_Name: cake1-removebg-preview_0
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -162,3 +163,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointValue: 4
+--- !u!114 &352786087445184561
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3159710083111542276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a013f3fa95364d4da212c610ffa9519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

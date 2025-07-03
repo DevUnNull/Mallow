@@ -2,24 +2,19 @@
 
 public class GiftPoint : MonoBehaviour
 {
-    private string reward;
+    public string rewardName;  // Đặt tên reward khi spawn
 
-    // Hàm nhận reward từ ObstacleSpawner
-    public void SetReward(string rewardName)
+    public void SetRewardName(string name)
     {
-        reward = rewardName;
+        rewardName = name;
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            Debug.Log("🎁 Bạn nhận được: " + reward);
-
-            if (RewardManager.instance != null)
-                RewardManager.instance.UnlockReward(reward);
-            
-
+            Debug.Log("🎁 Player chạm vào quà: " + rewardName);
+            RewardManager.instance?.UnlockReward(rewardName);
             Destroy(gameObject);
         }
     }
