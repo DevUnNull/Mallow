@@ -9,6 +9,7 @@ public class RewardManager : MonoBehaviour
     public List<RewardData> rewardList = new List<RewardData>();
 
     public PlayerShooter playerShooter;
+    public PlayerCallPet playerCallPet;
     public CoinManager coinManager;
     // Có thể thêm các thành phần khác như HealManager, ShieldManager...
 
@@ -60,6 +61,10 @@ public class RewardManager : MonoBehaviour
             case RewardType.Coin:
                 CoinManager.instance.AddCoin(2);
                 Debug.Log("duoc nha 2 coin");
+                break;
+            case RewardType.Pet:
+                playerCallPet?.SummonPet();
+                Debug.Log("dagoipet");
                 break;
         }
     }

@@ -879,6 +879,7 @@ GameObject:
   - component: {fileID: 1196387908}
   - component: {fileID: 1196387909}
   - component: {fileID: 1196387910}
+  - component: {fileID: 1196387911}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -955,6 +956,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1411110507}
+  - {fileID: 1268100997}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &1196387907
@@ -1057,6 +1059,53 @@ MonoBehaviour:
   bulletPrefab: {fileID: 8963334006555708427, guid: 6de26a9a5a957694a9ab73ba0af20946, type: 3}
   shootPoint: {fileID: 1411110507}
   shootingInterval: 0.2
+--- !u!114 &1196387911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196387902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0794f22440433b4d849f0dd7c37c746, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  petPrefab: {fileID: 5562729446954019779, guid: fa9b778c00bbe3a45ae4fbc09e3c6e9d, type: 3}
+  playerTransform: {fileID: 1268100997}
+  baseDistance: 1.5
+  spacing: 1.2
+--- !u!1 &1268100996
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1268100997}
+  m_Layer: 0
+  m_Name: petPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 3443629218296621865, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1268100997
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268100996}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.2, y: 2.14, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1196387906}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1327569125
 GameObject:
   m_ObjectHideFlags: 0
@@ -1095,8 +1144,11 @@ MonoBehaviour:
     rewardType: 3
   - rewardName: Coin
     rewardType: 4
+  - rewardName: Pet
+    rewardType: 5
   playerShooter: {fileID: 1196387910}
-  coinManager: {fileID: 0}
+  playerCallPet: {fileID: 1196387911}
+  coinManager: {fileID: 2122784449}
 --- !u!4 &1327569127
 Transform:
   m_ObjectHideFlags: 0
@@ -1417,16 +1469,18 @@ MonoBehaviour:
   - {fileID: 55165302855235829, guid: 17eb2e5d29e3907438fb30ff10ed4a28, type: 3}
   - {fileID: 4748619129940120625, guid: 6f3909bb476642846baed36195bf6f1a, type: 3}
   - {fileID: 7361158542305330701, guid: ce76de7f7d5c8dd4fb69b3319a1f528e, type: 3}
+  - {fileID: 8283576244136451770, guid: a46ba4c2eadca4f409ed37939fc98795, type: 3}
   spawnWeights:
-  - 1
-  - 1
+  - 2
+  - 2
   - 1
   - 1
   - 1
   - 1
   - 1
   - 9
-  spawnInterval: 2
+  - 9
+  spawnInterval: 1
 --- !u!4 &2063373043
 Transform:
   m_ObjectHideFlags: 0

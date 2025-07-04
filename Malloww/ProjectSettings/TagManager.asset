@@ -9,6 +9,7 @@ TagManager:
   - Undefined
   - Gift
   - Shooter
+  - Candy
   layers:
   - Default
   - TransparentFX

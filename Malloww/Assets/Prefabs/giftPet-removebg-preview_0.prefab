@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3176554538901409331
+--- !u!1 &8283576244136451770
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,40 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3608620967209445240}
-  - component: {fileID: 8684605048731426162}
-  - component: {fileID: 6979201650431592109}
-  - component: {fileID: 89883307246612911}
-  - component: {fileID: -3293533228476167975}
+  - component: {fileID: 6766445471786267668}
+  - component: {fileID: 3032582912561333793}
+  - component: {fileID: 1392196974151351279}
+  - component: {fileID: 1155826498036632701}
+  - component: {fileID: 9095850872521088326}
   m_Layer: 0
-  m_Name: candy_2
-  m_TagString: Candy
+  m_Name: giftPet-removebg-preview_0
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3608620967209445240
+--- !u!4 &6766445471786267668
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3176554538901409331}
+  m_GameObject: {fileID: 8283576244136451770}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8.23, y: -1.45, z: -0.06589107}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &8684605048731426162
+--- !u!212 &3032582912561333793
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3176554538901409331}
+  m_GameObject: {fileID: 8283576244136451770}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -79,37 +79,24 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7285887785296948430, guid: 9e59334d89931c54396221be5410e34e, type: 3}
+  m_Sprite: {fileID: 524605287537125554, guid: d22b6528854456e4bb49c8e70f895d9f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 3.93, y: 3.74}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6979201650431592109
-MonoBehaviour:
+--- !u!61 &1392196974151351279
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3176554538901409331}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6b9070909705a2440be75b20195283ab, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5
---- !u!58 &89883307246612911
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3176554538901409331}
+  m_GameObject: {fileID: 8283576244136451770}
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
@@ -137,18 +124,41 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.042720318, y: 0}
-  m_Radius: 1.3932986
---- !u!114 &-3293533228476167975
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 3.93, y: 3.74}
+    newSize: {x: 3.93, y: 3.74}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 3.93, y: 3.74}
+  m_EdgeRadius: 0
+--- !u!114 &1155826498036632701
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3176554538901409331}
+  m_GameObject: {fileID: 8283576244136451770}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4691d48e511e1a54f9ea4cd634239b21, type: 3}
+  m_Script: {fileID: 11500000, guid: 6b9070909705a2440be75b20195283ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointValue: 2
+  speed: 7
+--- !u!114 &9095850872521088326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8283576244136451770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2ce7b69b616ef940bd99cacf0c1149c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewardName: Pet
