@@ -5,7 +5,8 @@ public enum RewardType
     None,
     BonusShoot,
     Heal,
-    Shield
+    Shield,
+    Coin
     // Có thể thêm nữa
 }
 

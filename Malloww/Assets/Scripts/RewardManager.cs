@@ -9,6 +9,7 @@ public class RewardManager : MonoBehaviour
     public List<RewardData> rewardList = new List<RewardData>();
 
     public PlayerShooter playerShooter;
+    public CoinManager coinManager;
     // Có thể thêm các thành phần khác như HealManager, ShieldManager...
 
     void Awake()
@@ -55,6 +56,10 @@ public class RewardManager : MonoBehaviour
 
             case RewardType.Shield:
                 Debug.Log("🛡️ Shield player (chưa triển khai).");
+                break;
+            case RewardType.Coin:
+                CoinManager.instance.AddCoin(2);
+                Debug.Log("duoc nha 2 coin");
                 break;
         }
     }
