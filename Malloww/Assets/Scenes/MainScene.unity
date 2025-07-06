@@ -880,6 +880,7 @@ GameObject:
   - component: {fileID: 1196387909}
   - component: {fileID: 1196387910}
   - component: {fileID: 1196387911}
+  - component: {fileID: 1196387912}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1075,6 +1076,23 @@ MonoBehaviour:
   playerTransform: {fileID: 1268100997}
   baseDistance: 1.5
   spacing: 1.2
+--- !u!114 &1196387912
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1196387902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 239a6ba2b9428184883ad1e73653cf5d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerSpriteRenderer: {fileID: 1196387905}
+  defaultSkin: {fileID: 7404902248680806797, guid: 847b1d0ded1fba244881bbb37c196964, type: 3}
+  skinA: {fileID: -299672485488903082, guid: 847b1d0ded1fba244881bbb37c196964, type: 3}
+  skinB: {fileID: 7637230261886048109, guid: 847b1d0ded1fba244881bbb37c196964, type: 3}
+  skinC: {fileID: 8182426739930504938, guid: 847b1d0ded1fba244881bbb37c196964, type: 3}
 --- !u!1 &1268100996
 GameObject:
   m_ObjectHideFlags: 0

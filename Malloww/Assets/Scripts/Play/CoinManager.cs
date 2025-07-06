@@ -36,7 +36,7 @@ public class CoinManager : MonoBehaviour
         return coin;
     }
 
-    public void SpendCoin(int amount)
+    public bool SpendCoin(int amount)
     {
         if (coin >= amount)
         {
@@ -44,10 +44,12 @@ public class CoinManager : MonoBehaviour
             SaveCoin();
             Debug.Log("Đã tiêu coin, còn lại: " + coin);
             UpdateCoinUI();
+            return true;
         }
         else
         {
             Debug.Log("Không đủ coin để mua!");
+            return false;
         }
     }
 

@@ -19,8 +19,11 @@ MonoBehaviour:
     rid: 7753750539670913048
   m_Scenes:
   - m_enabled: 1
+    m_path: Assets/Scenes/StartScene.unity
+  - m_enabled: 1
     m_path: Assets/Scenes/MainScene.unity
-  m_ScriptingDefines: []
+  m_ScriptingDefines:
+  - 
   m_PlayerSettingsYaml:
     m_Settings:
     - line: '| PlayerSettings:'
