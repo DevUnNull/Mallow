@@ -1,15 +1,36 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MainMenuController : MonoBehaviour
 {
+    [SerializeField] private Animator anim;
     public string gameplaySceneName = "Gameplay";  // Đặt tên scene gameplay
-
+    public int TimeWait = 2;
     // Hàm gọi khi nhấn nút Play
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
     public void OnPlayButton()
     {
         Debug.Log("▶ Bắt đầu game");
-        SceneManager.LoadScene(gameplaySceneName);
+        StartCoroutine(WaitAnimationLoad());
+    }
+
+    IEnumerator WaitAnimationLoad()
+    {
+        anim.SetBool("IsNextScene", true);
+
+        yield return new WaitForSeconds(TimeWait);
+
+        AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(gameplaySceneName);
+
+        while (!asyncLoad.isDone)
+        {
+            yield return null;
+        }
+        anim.SetBool("IsNewScene", true);
     }
 
     // Hàm gọi khi nhấn nút Store

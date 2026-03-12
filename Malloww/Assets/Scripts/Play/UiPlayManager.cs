@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -10,12 +11,12 @@ public class UiPlayManager : MonoBehaviour
     public GameObject GameOverPanel;
     public GameObject settingPanel;
     public SceneView sceneView;
+
     void Awake()
     {
         if (instance == null)
             instance = this;
     }
-
     public void ShowGameOverUI() => GameOverPanel.SetActive(true);
     public void CloseGameOverUI() => GameOverPanel.SetActive(false);
 
