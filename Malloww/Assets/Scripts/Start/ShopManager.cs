@@ -28,6 +28,7 @@ public class ShopManager : MonoBehaviour
             Debug.Log($"⚠ Skin {skinType} đã mua trước đó → không mua lại.");
             PlayerPrefs.SetString("CurrentSkin", skinType.ToString());
             PlayerPrefs.Save();
+            SoundManager.PlayrSound(SoundType.ChoseSkin);
             return;
         }
 
@@ -39,9 +40,11 @@ public class ShopManager : MonoBehaviour
             PlayerPrefs.Save();
 
             Debug.Log($"✅ Mua thành công skin: {skinType}");
+            SoundManager.PlayrSound(SoundType.Buy);
         }
         else
         {
+            SoundManager.PlayrSound(SoundType.UnBuy);
             Debug.Log("❌ Không đủ coin để mua skin!");
         }
     }

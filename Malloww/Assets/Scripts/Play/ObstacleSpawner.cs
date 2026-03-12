@@ -51,7 +51,7 @@ public class ObstacleSpawner : MonoBehaviour
         for (int i = 0; i < spawnWeights.Length; i++)
         {
             cumulative += spawnWeights[i];
-            if (randomValue <= cumulative)
+            if (randomValue < cumulative)
             {
                 return i;
             }

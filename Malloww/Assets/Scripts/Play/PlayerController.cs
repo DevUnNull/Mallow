@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
             Vector3 scale = transform.localScale;
             scale.y *= -1;
             transform.localScale = scale;
+            SoundManager.PlayrSound(SoundType.Jump);
         }
     }
 }

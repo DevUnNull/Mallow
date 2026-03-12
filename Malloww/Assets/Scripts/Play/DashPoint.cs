@@ -9,6 +9,7 @@ public class DashPoint : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             ScoreManager.instance.MinusPoint(pointValue);
+            PlayerHealManager.instance.hit(pointValue);
             Destroy(gameObject); 
         }
     }

@@ -18,4 +18,5 @@ public class UIManager : MonoBehaviour
 
     public void ShowSettingUI() => settingPanel.SetActive(true);
     public void CloseSettingUI() => settingPanel.SetActive(false);
+
 }
