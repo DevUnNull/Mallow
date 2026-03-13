@@ -31,7 +31,7 @@ public class ObstacleSpawner : MonoBehaviour
     void SpawnObstacle()
     {
         int index = GetWeightedRandomIndex();
-        Vector3 spawnPos = new Vector3(10f, Random.Range(-4.2f, 4.2f), 0f);
+        Vector3 spawnPos = new Vector3(10f, Random.Range(-3.2f, 3.2f), 0f);
         // Spawn prefab
         GameObject spawned = Instantiate(obstaclePrefabs[index], spawnPos, Quaternion.identity);
     }
